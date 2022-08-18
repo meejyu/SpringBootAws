@@ -6,13 +6,6 @@ branches:
   only:
     - main
 
-# ------------추가 부분----------------
-
-before_script:
-  - cd SpringBootAws/
-
-# ------------------------------------
-
 # Travis CI 서버의 Home
 cache:
   directories:
