@@ -14,7 +14,7 @@ before_script:
 # ------------------------------------
 
 before_deploy:
-  - zip -r free-springboot2-webservice
+  - zip -r free-springboot2-webservice *
   - mkdir -p deploy
   - mv free-springboot2-webservice.zip deploy/free-springboot2-webservice.zip
 
