@@ -1,4 +1,4 @@
-package com.springboot.study.web.dto;
+package com.springboot.study.web;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

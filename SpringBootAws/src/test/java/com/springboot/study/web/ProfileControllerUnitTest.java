@@ -23,6 +23,10 @@ public class ProfileControllerUnitTest {
         //when
         String profile = controller.profile();
 
+        System.out.println("expectedProfile = " + expectedProfile);
+
+        System.out.println("profile = " + profile);
+
         //then
         assertThat(profile).isEqualTo(expectedProfile);
 
