@@ -37,3 +37,7 @@ nohup java -jar \
     -Dspring.config.location=classpath:/application.properties,classpath:/application-real.properties,/home/ec2-user/app/step1/application-oauth.properties,/home/ec2-user/app/step1/application-real-db.properties \
     -Dspring.profiles.active=real \
     $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+
+# nohup
+# 실행 중인 프로세스를 중단 없이 계속하려면 nohup 명령이 필요하다
+# jar 파일을 실행한다.

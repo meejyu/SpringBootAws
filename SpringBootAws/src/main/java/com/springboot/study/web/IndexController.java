@@ -17,8 +17,8 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
+    // 기존에 (User) httpSession.getAttribute("user")로 가져오던 세션 정보 값이 개선 되었습니다.
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
@@ -49,7 +49,7 @@ public class IndexController {
      * 보통 세션 저장소에 대해 3가지중 한가지를 선택한다
      * 1. 톰캣 세션을 사용한다.
      *  - 일반적으로 별다른 설정을 하지 않을 때 기본적으로 선택되는 방식이다.
-     *  - 이렇게 될경우 톰캣에 세션이 저장되기 때문에 2대 이상의 WAS가 구동외는 환경에서는 톰캣들 간의 세션 공유를 위한 추가 설정이 필요하다
+     *  - 이렇게 될경우 톰캣에 세션이 저장되기 때문에 2대 이상의 WAS가 구동되는 환경에서는 톰캣들 간의 세션 공유를 위한 추가 설정이 필요하다
      *
      *  2. mysql과 같은 디비를 세션 저장소로 사용한다
      *  - 여러 was간의 공유 세션을 사용할 수 있는 가장 쉬운 방법이다.

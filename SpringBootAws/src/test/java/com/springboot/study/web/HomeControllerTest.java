@@ -65,6 +65,6 @@ public class HomeControllerTest {
      *
      * param
      * api 테스트할때 사용될 요청파라미터를 설정
-     * 단 값은 String만 허용     *
+     * 단 값은 String만 허용
      */
 }
